@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="js/socket.io.js"></script>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script>
+  var socket = io.connect('http://192.168.2.107/',{port: 8080});
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+</head>
+<body>
+	Aplicacion de Pruebas
+	Version 9 de Node.JS 
+</body>
+</html>

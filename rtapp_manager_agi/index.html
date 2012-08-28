@@ -1,0 +1,56 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/json.js"></script>
+<script>
+// Ultimo canal que estaba en estado Ringing
+var last_ringing_channel = '';
+//Funciones de Entrada
+function escribir_evento(evento){
+	$('#last_event').append('<p>' + JSON.stringify(evento, null,'\t') + '</p>');
+}
+
+function llamada_entrante(evento){
+	last_ringing_channel = evento.channel;
+	alert('El llamante es: ' + evento.connectedlinenum + ' y esta llamando a '  + evento.calleridnum);
+}
+
+//Funciones de Salida
+// Transfiere la persona a la que hemos llamado a la extension de PACO
+function transferir_a_paco(channel){
+	socket.emit('transferir_a_paco',{'channel':channel});
+}
+function colgar(channel){
+	socket.emit('colgar',{'channel':channel});
+}
+
+function reproducir_monos(){
+	socket.emit('reproducir_monos');
+}
+function llamar_a_103(){
+	socket.emit('llamar_a_103');
+}
+
+//Conexion
+var socket = io.connect('http://192.168.2.107/',{port: 8080});
+
+socket.on('evento_recibido', function (data) {
+	escribir_evento(data);
+});
+
+socket.on('ringing', function (data) {
+	llamada_entrante(data);
+});
+
+</script>
+</head>
+<body>
+	<a onclick="javascript:reproducir_monos();" href="#?">Reproducir Monos en AGI:async</a>
+	<a onclick="javascript:llamar_a_103();" href="#?">Llamar a 103</a>
+	<a onclick="javascript:colgar(last_ringing_channel);" href="#?">Colgar</a>
+	<a onclick="javascript:transferir_a_paco(last_ringing_channel);" href="#?">Transferir a Paco 107</a>
+	<div id="last_event" style="background-color: #FFE6CC;">
+	</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+Script iniciado (jue 26 jul 2012 02:17:42 CEST
+)   [36minfo  -[39m socket.io started
+Connecting to localhost:5038
+Evento Recicido
+{ event: 'fullybooted',
+  privilege: 'system,all',
+  status: 'Fully Booted' }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Evento Recicido
+{ event: 'newchannel',
+  privilege: 'call,all',
+  channel: 'SIP/105-00000013',
+  channelstate: '0',
+  channelstatedesc: 'Down',
+  calleridnum: '105',
+  calleridname: 'Maria Perez',
+  accountcode: '',
+  exten: '103',
+  context: 'interno',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'SIPURI',
+  value: 'sip:105@192.168.2.2:54142',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'SIPDOMAIN',
+  value: '192.168.2.107',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'SIPCALLID',
+  value: 'ZDVlM2Q5ZTJlMTQ0Yzk4ZjBhNmFlY2M5MWI0MDkyNTc.',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'newstate',
+  privilege: 'call,all',
+  channel: 'SIP/105-00000013',
+  channelstate: '4',
+  channelstatedesc: 'Ring',
+  calleridnum: '105',
+  calleridname: 'Maria Perez',
+  connectedlinenum: '',
+  connectedlinename: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'newexten',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  context: 'interno',
+  extension: '103',
+  priority: '1',
+  application: 'NoOp',
+  appdata: 'Llamamos a la extension 103',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'newexten',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  context: 'interno',
+  extension: '103',
+  priority: '2',
+  application: 'Dial',
+  appdata: 'SIP/103,30,tTr',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'DIALSTATUS',
+  value: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'DIALEDPEERNUMBER',
+  value: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'DIALEDPEERNAME',
+  value: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'ANSWEREDTIME',
+  value: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/105-00000013',
+  variable: 'DIALEDTIME',
+  value: '',
+  uniqueid: '1343261873.19' }
+Evento Recicido
+{ event: 'newchannel',
+  privilege: 'call,all',
+  channel: 'SIP/103-00000014',
+  channelstate: '0',
+  channelstatedesc: 'Down',
+  calleridnum: '103',
+  calleridname: 'Juan Luis',
+  accountcode: '',
+  exten: '',
+  context: 'interno',
+  uniqueid: '1343261873.20' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/103-00000014',
+  variable: 'SIPCALLID',
+  value: '17f87f6a1dfee4445a42524b6512fd54@192.168.2.107:5060',
+  uniqueid: '1343261873.20' }
+Evento Recicido
+{ event: 'varset',
+  privilege: 'dialplan,all',
+  channel: 'SIP/103-00000014',
+  variable: 'DIALEDPEERNUMBER',
+  value: '103',
+  uniqueid: '1343261873.20' }
+Evento Recicido
+{ event: 'dial',
+  privilege: 'call,all',
+  subevent: 'Begin',
+  channel: 'SIP/105-00000013',
+  destination: 'SIP/103-00000014',
+  calleridnum: '105',
+  calleridname: 'Maria Perez',
+  connectedlinenum: '<unknown>',
+  connectedlinename: '<unknown>',
+  uniqueid: '1343261873.19',
+  destuniqueid: '1343261873.20',
+  dialstring: '103' }
+Evento Recicido
+{ event: 'newstate',
+  privilege: 'call,all',
+  channel: 'SIP/103-00000014',
+  channelstate: '5',
+  channelstatedesc: 'Ringing',
+  calleridnum: '103',
+  calleridname: 'Juan Luis',
+  connectedlinenum: '105',
+  connectedlinename: 'Maria Perez',
+  uniqueid: '1343261873.20' }
+Evento Recicido
+{ event: 'peerstatus',
+  privilege: 'system,all',
+  channeltype: 'SIP',
+  peer: 'SIP/103',
+  peerstatus: 'Registered',
+  address: '192.168.2.2:54142' }
+Evento Recicido
+{ event: 'peerstatus',
+  privilege: 'system,all',
+  channeltype: 'SIP',
+  peer: 'SIP/105',
+  peerstatus: 'Registered',
+  address: '192.168.2.2:54142' }
+^C
+Script terminado (jue 26 jul 2012 02:18:14 CEST
+)
